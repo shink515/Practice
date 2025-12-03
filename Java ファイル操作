@@ -1,0 +1,42 @@
+package pack;
+import java.io.*;
+
+public class sample
+{
+	public static void main(String[] args)
+	{
+		BufferedReader br = null;
+		BufferedWriter bw = null;
+		
+		try{
+			br = new BufferedReader(new FileReader("c:\\users\\texir\\source.txt"));
+			bw = new BufferedWriter(new FileWriter("c:\\users\\texir\\copy.txt"));
+			
+			String str;
+			while((str = br.readLine()) != null)
+			{
+				bw.write(str + "\r\n");
+			}
+			bw.flush();
+		}
+		catch(FileNotFoundException e)
+		{
+			System.out.println("ファイルが存在しません");
+		}
+		catch(IOException e)
+		{
+			System.out.println("読み書きエラー");
+		}
+		finally
+		{
+			try{
+				if(br != null)br.close();
+				if(bw != null)bw.close();
+			}
+			catch(IOException e)
+			{
+				System.out.println("ファイルクローズエラー");
+			}
+		}
+	}
+}
