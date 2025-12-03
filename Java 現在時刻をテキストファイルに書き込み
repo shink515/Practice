@@ -1,0 +1,27 @@
+package sample;
+import java.io.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class problem
+{
+	public static void main(String[] args)
+	{
+		DateTimeFormatter fm = DateTimeFormatter.ofPattern("yyyy/MM/dd/ HH:mm:ss");
+		String now = LocalDateTime.now().format(fm);
+		
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter("c:\\users\\texir\\log.txt",true)))
+		{
+			bw.write(now);
+			bw.newLine();
+		}
+		catch(FileNotFoundException e)
+		{
+			System.out.println("ファイルが存在しません");
+		}
+		catch(IOException e)
+		{
+			System.out.println("書き込みエラー");
+		}
+	}
+}
