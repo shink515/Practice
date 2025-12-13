@@ -1,0 +1,15 @@
+package sample;
+import java.util.*;
+
+public class problem
+{
+	public static void main(String[] args)
+	{
+		StringBuilder sb = new StringBuilder("apple");
+		
+		for(char x : sb.toString().toUpperCase().toCharArray())
+		{
+			System.out.print(x + " ");
+		}
+	}
+}
