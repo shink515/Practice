@@ -10,6 +10,7 @@ public class problem
 			if(sb.charAt(i) == c)
 			{
 				sb.deleteCharAt(i);
+				i--;　　　　　　　　　　　　　//文字を削除したため、インデックスを減らして位置合わせ
 			}
 		}
 	}
