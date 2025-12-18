@@ -11,14 +11,19 @@ public class Q_101
 		int shakai = 26;
 		
 		int sum = kokugo + sugaku + shakai;    //合計値求める
-		
+
+
 		double avg = (double)(sum / 3.0);      //平均を実数で求める（今回のミス内容：最初から実数で平均を計算する）
+												// avg = 48.666666666666664
 		
 		double avg2 = avg * 10;             //平均を10倍して同じく実数で格納する（今回のミス内容：10倍しても一度実数で格納する）
-		
+											// avg2 = 486.66666666666663
+
 		int avg3 = (int)avg2;              //整数に変換
+											// avg3 = 486
 		
 		double avg4 = (double)avg3 / 10;      //10で割って実数型に変換
+											// avg3 = 48.6
 		
 		System.out.println("合計:" + sum);
 		System.out.println("平均:" + avg4);
