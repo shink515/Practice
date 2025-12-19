@@ -1,0 +1,43 @@
+package shinzato;
+import java.util.*;
+import java.text.NumberFormat;
+
+public class Q_101
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		Locale jp = new Locale("ja","JP");
+		Locale us = new Locale("en","US");
+		Locale de = new Locale("de","DE");
+		
+		NumberFormat nfjp = NumberFormat.getCurrencyInstance(jp);
+		NumberFormat nfus = NumberFormat.getCurrencyInstance(us);
+		NumberFormat nfde = NumberFormat.getCurrencyInstance(de);
+		
+		System.out.print("金額（整数）を入力:");
+		int price = sc.nextInt();
+		sc.nextLine();
+		
+		System.out.print("日本（１）、アメリカ（２）、ドイツ（３）を選択:");
+		int select = sc.nextInt();
+		sc.nextLine();
+		
+		if(select == 1)
+		{
+			System.out.println(jp.getDisplayCountry() + "を選択したので、" + jp.getDisplayLanguage() + "で表示 : " + nfjp.format(price));
+		}
+		
+		if(select == 2)
+		{
+			System.out.println(us.getDisplayCountry() + "を選択したので、" + us.getDisplayLanguage() + "で表示 : " + nfus.format(price));
+		}
+		
+		if(select == 3)
+		{
+			System.out.println(de.getDisplayCountry() + "を選択したので、" + de.getDisplayLanguage() + "で表示 : " + nfde.format(price));
+		}
+		
+	}
+}
