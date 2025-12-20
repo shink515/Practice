@@ -1,0 +1,46 @@
+package shinzato;
+import java.util.Scanner;
+import java.util.Locale;
+import java.text.NumberFormat;
+
+public class sample
+{
+	public static void main(String args[])
+	{
+		Locale jp = Locale.JAPAN;
+		Locale us = Locale.US;
+		Locale de = Locale.GERMANY;
+		
+		NumberFormat nfjp = NumberFormat.getCurrencyInstance(jp);
+		NumberFormat nfus = NumberFormat.getCurrencyInstance(us);
+		NumberFormat nfde = NumberFormat.getCurrencyInstance(de);
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("金額を入力:");
+		int price = sc.nextInt();
+		sc.nextLine();
+
+		System.out.print("国コードを入力:");
+		String code = sc.nextLine();
+		
+		switch(code)
+		{
+			case "JP":
+						System.out.println(jp.getDisplayLanguage() + ":" + nfjp.format(price));
+						break;
+						
+			case "US":
+						System.out.println(us.getDisplayLanguage() + ":" + nfus.format(price));
+						break;
+						
+			case "DE":
+						System.out.println(de.getDisplayLanguage() + ":" + nfde.format(price));
+						break;
+						
+			default:
+						System.out.println("未対応");
+						break;
+		}
+	}
+}
