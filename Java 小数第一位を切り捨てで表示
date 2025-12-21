@@ -1,0 +1,11 @@
+		int a = 30;
+		int b = 90;
+		int c = 26;
+		
+		int sum = a + b + c;
+		
+		double avg = sum / 3.0;		      //48.666666666666664
+		
+		int avg2 = (int)(avg * 10);		  //486
+		
+		double avg3 = (double)(avg2 / 10.0);	    //48.6
