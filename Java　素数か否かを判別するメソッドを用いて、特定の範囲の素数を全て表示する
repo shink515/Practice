@@ -1,0 +1,32 @@
+package shinzato;
+import java.util.Scanner;
+
+class Problem
+{
+	public static void main(String args[])
+	{
+		for(int i = 10000 ; i < 10100 ; i++)
+		{
+			if(found(i) == true)
+			{
+				System.out.print(i + " ");
+			}
+		}
+	}
+	
+	public static boolean found(int x)
+	{
+		
+		if(x < 2) return false;
+		
+		for(int i = 2 ; i < x ; i++)
+		{
+			if(x % i == 0)
+			{
+				return false;
+			}
+		}
+		
+		return true;
+	}
+}
