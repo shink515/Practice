@@ -1,0 +1,38 @@
+package shinzato;
+import java.util.Scanner;
+
+class Problem
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		int data[] = new int[10];
+		
+		for(int i = 0 ; i < data.length ; i++)
+		{
+			System.out.print("整数を入力:");
+			data[i] = sc.nextInt();
+			sc.nextLine();
+		}
+		
+		for(int n = 0 ; n < data.length - 1 ; n++)
+		{
+			for(int m = n + 1 ; m < data.length ; m++)
+			{
+				if(data[n] > data[m])                      // ※重要　配列の隣り合う要素を比較、もし次の要素が小さい値だった場合
+				{
+					int smaller = data[m];                   // 小さい値を変数に記憶しておく
+					data[m] = data[n];                       // 大きい値を次の要素に格納する
+					data[n] = smaller;                       // 変数に確保しておいた小さい値を前の要素に格納する
+				}
+			}
+		}
+		
+		System.out.println();
+		
+		for(int x : data)
+		{
+			System.out.print(x + " ");
+		}
+	}
+}
