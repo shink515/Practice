@@ -7,9 +7,9 @@ public class problem
 	{
 		StringBuilder sb = new StringBuilder("apple");
 		
-		for(char x : sb.toString().toUpperCase().toCharArray())
-		{
-			System.out.print(x + " ");
-		}
+		for(char x : sb.toString().toUpperCase().toCharArray())			//　StringBuilderをtoStringメソッドで文字列に変換
+		{																//　StringクラスのtoUpperCaseメソッドで文字列を大文字に変換
+			System.out.print(x + " ");									//  StringクラスのtoCharArrayメソッドで文字の配列に変換
+		}																//　文字型の配列から一文字を取り出して、xに格納 → 表示
 	}
 }
