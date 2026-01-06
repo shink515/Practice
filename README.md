@@ -8,12 +8,15 @@ Javaの基礎学習内容のシェア用レポジトリ
 【参考文献】
 
 一週間で身につくJava言語の基本　-　シフトシステム株式会社
+
 https://java.sevendays-study.com/index.html
 
 北ソフト工房　Java練習問題集　-　杉野 制
+
 https://kitako.tokyo/lib/JavaExercise.aspx
 
 未来エンジニア養成所Blog　Java練習問題　-　合同会社フェデュケーション
+
 https://phoeducation.work/JavaPractice
 
 【開発環境】
