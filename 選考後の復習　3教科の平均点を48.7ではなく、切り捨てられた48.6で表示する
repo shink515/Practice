@@ -13,7 +13,7 @@ public class Q_101
 		int sum = kokugo + sugaku + shakai;    //合計値求める
 
 
-		double avg = (double)sum / 3.0;      //平均を求める（今回のミス内容：最初から実数で平均を計算する）
+		double avg = (double)sum / 3.0;      //平均を求める（今回のミス内容：最初から実数で割っていなかった）
 												// avg = 48.666666666666664
 		
 		double avg2 = avg * 10.0;             //平均を10.0倍して格納する
